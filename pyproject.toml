@@ -1,5 +1,5 @@
 [project]
-name = "gst"
+name = "gist-cli"
 version = "0.1.0"
 description = "GitHub Gist cli without github, only gist."
 readme = "README.md"
