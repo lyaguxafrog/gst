@@ -2,8 +2,8 @@ name: "Sphinx: Render docs"
 
 on:
   push:
-    tags:
-      - 'v*'
+    branches:
+      - "master"
 
 jobs:
   build:
@@ -23,8 +23,8 @@ jobs:
 
       - name: Install dependencies
         run: |
-          uv pip install sphinx sphinx_click
-          uv pip install -e .
+          uv pip install --system sphinx sphinx_click
+          uv pip install --system -e .
 
       - name: Build HTML
         run: make html
