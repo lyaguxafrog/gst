@@ -1,13 +1,18 @@
 # -*- coding: utf-8 -*-
 
+import importlib.metadata
+
 import click
 
 from gst.commands import auth, logout
 
 
+__version__ = importlib.metadata.version("gst")
+
+
 @click.group()
 @click.version_option(
-    version="0.1.0",
+    version=__version__,
     prog_name="gst",
 )
 def cli():
