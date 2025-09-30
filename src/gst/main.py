@@ -6,6 +6,10 @@ from gst.commands import auth, logout
 
 
 @click.group()
+@click.version_option(
+    version="0.1.0",
+    prog_name="gst",
+)
 def cli():
     """gst: A CLI tool to manage your GitHub starred repositories."""
     pass
