@@ -7,7 +7,9 @@ authors = [
     { name = "Adrian Makridenko", email = "adrianmakridenko@duck.com" }
 ]
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "typer>=0.19.2",
+]
 
 [project.scripts]
 gst = "gst:main"
