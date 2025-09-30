@@ -10,7 +10,7 @@ so why should I keep the entire `gh-cli`?
 
 ## Installation
 ```bash
-pip install gst-cli
+pip install gist-cli
 ```
 
 ## Example:
