@@ -26,6 +26,7 @@ dev = [
     "icecream>=2.1.8",
     "isort>=6.0.1",
     "ruff>=0.13.2",
+    "sphinx>=8.2.3",
 ]
 
 [tool.ruff]
