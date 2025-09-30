@@ -27,9 +27,7 @@ jobs:
           pip install sphinx sphinx_click
 
       - name: Build HTML
-        run: |
-          cd docs
-          make html
+        run: make -C . html
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
