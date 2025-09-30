@@ -8,11 +8,17 @@ authors = [
     { name = "Adrian Makridenko", email = "adrianmakridenko@duck.com" }
 ]
 requires-python = ">=3.13"
+keywords = ["cli", "gist", "github", "httpx", "keyring", "click"]
 dependencies = [
     "click>=8.3.0",
     "httpx>=0.28.1",
     "keyring>=25.6.0",
 ]
+
+[project.urls]
+Homepage = "https://gst.makridenko.ru"
+Repository = "https://github.com/lyaguxafrog/gst"
+Issues = "https://github.com/lyaguxafrog/gst/issues"
 
 [project.scripts]
 gst = "gst:main"
@@ -32,6 +38,7 @@ dev = [
     "isort>=6.0.1",
     "ruff>=0.13.2",
     "sphinx>=8.2.3",
+    "sphinx-click>=6.1.0",
 ]
 
 [tool.ruff]
