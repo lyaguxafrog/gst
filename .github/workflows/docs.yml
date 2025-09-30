@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - "master"
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -21,13 +20,17 @@ jobs:
         with:
           python-version: "3.13"
 
-      - name: Install dependencies
+      - name: Create venv and install dependencies
         run: |
-          uv pip install --system sphinx sphinx_click
-          uv pip install --system -e .
+          uv venv .venv
+          source .venv/bin/activate
+          uv pip install sphinx sphinx_click
+          uv pip install -e .
 
       - name: Build HTML
-        run: make html
+        run: |
+          source .venv/bin/activate
+          make html
 
       - name: Prevent Jekyll processing
         run: touch docs/_build/html/.nojekyll
