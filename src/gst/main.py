@@ -16,7 +16,7 @@ __version__ = importlib.metadata.version("gist-cli")
     prog_name="gst",
 )
 def cli():
-    """gst: A CLI tool to manage your GitHub starred repositories."""
+    """gst: A CLI tool to manage your GitHub Gists."""
     pass
 
 
