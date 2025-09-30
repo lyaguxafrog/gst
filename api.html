@@ -34,11 +34,61 @@
             
   <section id="api-reference">
 <h1>API Reference<a class="headerlink" href="#api-reference" title="Link to this heading">¶</a></h1>
-<section id="http-client">
-<h2>HTTP Client<a class="headerlink" href="#http-client" title="Link to this heading">¶</a></h2>
+<section id="module-gst.services.http">
+<span id="http-client"></span><h2>HTTP Client<a class="headerlink" href="#module-gst.services.http" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="gst.services.http.send_request">
+<span class="sig-prename descclassname"><span class="pre">gst.services.http.</span></span><span class="sig-name descname"><span class="pre">send_request</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Literal</span><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'POST'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'GET'</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Response</span></span></span><a class="headerlink" href="#gst.services.http.send_request" title="Link to this definition">¶</a></dt>
+<dd><p>Send an HTTP request to the specified endpoint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>method</strong> (<em>Literal</em><em>[</em><em>&quot;POST&quot;</em><em>, </em><em>&quot;GET&quot;</em><em>]</em>) – The HTTP method to use.</p></li>
+<li><p><strong>headers</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>str</em><em>]</em>) – The headers to include in the request.</p></li>
+<li><p><strong>path</strong> (<em>str</em><em> | </em><em>None</em>) – The path to append to the endpoint (if any).</p></li>
+<li><p><strong>body</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>str</em><em>] </em><em>| </em><em>None</em>) – The body of the request (for POST requests).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The response from the server.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>httpx.Response</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If an unsupported HTTP method is provided.</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
-<section id="token-tools">
-<h2>Token tools<a class="headerlink" href="#token-tools" title="Link to this heading">¶</a></h2>
+<section id="module-gst.services.token_setter">
+<span id="token-tools"></span><h2>Token tools<a class="headerlink" href="#module-gst.services.token_setter" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="gst.services.token_setter.get_token">
+<span class="sig-prename descclassname"><span class="pre">gst.services.token_setter.</span></span><span class="sig-name descname"><span class="pre">get_token</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#gst.services.token_setter.get_token" title="Link to this definition">¶</a></dt>
+<dd><p>Retrieve the stored token from the keyring.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The retrieved token.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gst.services.token_setter.set_token">
+<span class="sig-prename descclassname"><span class="pre">gst.services.token_setter.</span></span><span class="sig-name descname"><span class="pre">set_token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#gst.services.token_setter.set_token" title="Link to this definition">¶</a></dt>
+<dd><p>Store the provided token securely using the keyring library.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>token</strong> (<em>str</em>) – The token to be stored.</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 </section>
 
@@ -71,8 +121,8 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="usage.html">Command Line Interface</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">API Reference</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#http-client">HTTP Client</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#token-tools">Token tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-gst.services.http">HTTP Client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-gst.services.token_setter">Token tools</a></li>
 </ul>
 </li>
 </ul>
