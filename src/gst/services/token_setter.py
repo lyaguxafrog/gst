@@ -3,7 +3,7 @@
 import keyring
 
 
-async def set_token(token: str) -> None:
+def set_token(token: str) -> None:
     """Store the provided token securely using the keyring library.
 
     Args:
@@ -14,7 +14,7 @@ async def set_token(token: str) -> None:
     keyring.set_password(SERVICE, USERNAME, token)
 
 
-async def get_token() -> str:
+def get_token() -> str:
     """Retrieve the stored token from the keyring.
 
     Returns:
