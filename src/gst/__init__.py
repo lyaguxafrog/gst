@@ -1,4 +1,10 @@
 # -*- coding: utf-8 -*-
 
-def main() -> None:
-    print("Hello from gst!")
+from .main import cli
+
+
+__all__ = ["cli"]
+
+
+def main():
+    cli()
