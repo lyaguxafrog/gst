@@ -8,7 +8,7 @@ import httpx
 __ENDPOINT__: str = "https://api.github.com/gists"
 
 
-async def send_request(
+def send_request(
     method: Literal["POST", "GET"],
     headers: dict[str, str],
     body: dict[str, str] | None = None,
@@ -22,16 +22,18 @@ async def send_request(
 
     Returns:
         httpx.Response: The response from the server.
+
+    Raises:
+        ValueError: If an unsupported HTTP method is provided.
     """
-    async with httpx.AsyncClient() as client:
+    with httpx.Client() as client:
         match method:
             case "POST":
-                response = await client.post(
-                    __ENDPOINT__, headers=headers, json=body
-                )
+                response = client.post(__ENDPOINT__, headers=headers, json=body)
             case "GET":
-                response = await client.get(__ENDPOINT__, headers=headers)
-            case "_":
-                raise ValueError("Unsupported HTTP method")
+                response = client.get(__ENDPOINT__, headers=headers)
+            case _:
+                raise ValueError(f"Unsupported HTTP method: {method}")
 
+    response.raise_for_status()
     return response

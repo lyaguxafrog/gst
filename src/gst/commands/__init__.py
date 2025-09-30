@@ -3,3 +3,4 @@
 """Gst commands logic."""
 
 from .auth import auth, logout
+from .create import create_gist

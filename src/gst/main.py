@@ -4,7 +4,7 @@ import importlib.metadata
 
 import click
 
-from gst.commands import auth, logout
+from gst.commands import auth, create_gist, logout
 
 
 __version__ = importlib.metadata.version("gst")
@@ -22,3 +22,4 @@ def cli():
 
 cli.add_command(auth)
 cli.add_command(logout)
+cli.add_command(create_gist)
