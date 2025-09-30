@@ -48,31 +48,73 @@
 <dd><p>Show the version and exit.</p>
 </dd></dl>
 
-<p class="rubric">Commands</p>
-<dl class="object">
-<dt class="sig sig-object">
-<span class="sig-name descname"><span class="pre">auth</span></span></dt>
-<dd><p>Authenticate with GitHub by providing a…</p>
+<section id="gst-auth">
+<h3>auth<a class="headerlink" href="#gst-auth" title="Link to this heading">¶</a></h3>
+<p>Authenticate with GitHub by providing a personal access token.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>gst<span class="w"> </span>auth<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</pre></div>
+</div>
+</section>
+<section id="gst-clone">
+<h3>clone<a class="headerlink" href="#gst-clone" title="Link to this heading">¶</a></h3>
+<p>Clone a Gist.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>gst<span class="w"> </span>clone<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>GIST<span class="w"> </span><span class="o">[</span>PATH<span class="o">]</span>
+</pre></div>
+</div>
+<p class="rubric">Arguments</p>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-gst-clone-arg-GIST">
+<span class="sig-name descname"><span class="pre">GIST</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-gst-clone-arg-GIST" title="Link to this definition">¶</a></dt>
+<dd><p>Required argument</p>
 </dd></dl>
 
-<dl class="object">
-<dt class="sig sig-object">
-<span class="sig-name descname"><span class="pre">clone</span></span></dt>
-<dd><p>Clone a Gist.</p>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-gst-clone-arg-PATH">
+<span class="sig-name descname"><span class="pre">PATH</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-gst-clone-arg-PATH" title="Link to this definition">¶</a></dt>
+<dd><p>Optional argument</p>
 </dd></dl>
 
-<dl class="object">
-<dt class="sig sig-object">
-<span class="sig-name descname"><span class="pre">create</span></span></dt>
-<dd><p>Create a new Gist from a file or directory.</p>
+</section>
+<section id="gst-create">
+<h3>create<a class="headerlink" href="#gst-create" title="Link to this heading">¶</a></h3>
+<p>Create a new Gist from a file or directory.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>gst<span class="w"> </span>create<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>PATH
+</pre></div>
+</div>
+<p class="rubric">Options</p>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-gst-create-d">
+<span id="cmdoption-gst-create-description"></span><span class="sig-name descname"><span class="pre">-d</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--description</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;description&gt;</span></span><a class="headerlink" href="#cmdoption-gst-create-d" title="Link to this definition">¶</a></dt>
+<dd><p>Description of the Gist.</p>
 </dd></dl>
 
-<dl class="object">
-<dt class="sig sig-object">
-<span class="sig-name descname"><span class="pre">logout</span></span></dt>
-<dd><p>Logout by removing the stored personal…</p>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-gst-create-w">
+<span id="cmdoption-gst-create-web"></span><span class="sig-name descname"><span class="pre">-w</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--web</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-gst-create-w" title="Link to this definition">¶</a></dt>
+<dd><p>Open the Gist in a web browser after creation.</p>
 </dd></dl>
 
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-gst-create-p">
+<span id="cmdoption-gst-create-public"></span><span class="sig-name descname"><span class="pre">-p</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--public</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-gst-create-p" title="Link to this definition">¶</a></dt>
+<dd><p>Make the Gist public.</p>
+</dd></dl>
+
+<p class="rubric">Arguments</p>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-gst-create-arg-PATH">
+<span class="sig-name descname"><span class="pre">PATH</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-gst-create-arg-PATH" title="Link to this definition">¶</a></dt>
+<dd><p>Required argument</p>
+</dd></dl>
+
+</section>
+<section id="gst-logout">
+<h3>logout<a class="headerlink" href="#gst-logout" title="Link to this heading">¶</a></h3>
+<p>Logout by removing the stored personal access token.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>gst<span class="w"> </span><span class="nb">logout</span><span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</pre></div>
+</div>
+</section>
 </section>
 </section>
 
