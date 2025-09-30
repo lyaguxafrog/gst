@@ -27,6 +27,11 @@ jobs:
           uv pip install sphinx sphinx_click
           uv pip install -e .
 
+      - name: Check gst import
+        run: |
+          source .venv/bin/activate
+          python -c "import gst.main; print('GST imported:', gst.main)"
+
       - name: Build HTML
         run: |
           source .venv/bin/activate
