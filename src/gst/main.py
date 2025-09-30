@@ -4,10 +4,10 @@ import importlib.metadata
 
 import click
 
-from gst.commands import auth, create_gist, logout
+from gst.commands import auth, clone_gist, create_gist, logout
 
 
-__version__ = importlib.metadata.version("gst")
+__version__ = importlib.metadata.version("gist-cli")
 
 
 @click.group()
@@ -23,3 +23,4 @@ def cli():
 cli.add_command(auth)
 cli.add_command(logout)
 cli.add_command(create_gist)
+cli.add_command(clone_gist)

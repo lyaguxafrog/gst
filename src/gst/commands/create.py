@@ -89,7 +89,7 @@ def create_gist(path: str, description: str | None, web: bool, public: bool):
     }
 
     try:
-        response = send_request("POST", headers, body)
+        response = send_request("POST", headers, None, body)
         response.raise_for_status()
         gist_id = response.json().get("id")
         gist_url = f"https://gist.github.com/{gist_id}"
