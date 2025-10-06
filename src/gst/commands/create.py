@@ -5,6 +5,7 @@ import webbrowser
 
 import click
 
+from gst.services.gr import gen_qr_code
 from gst.services.http import send_request
 from gst.services.token_setter import get_token
 
@@ -33,7 +34,10 @@ def is_text_file(file_path: str) -> bool:
     help="Open the Gist in a web browser after creation.",
 )
 @click.option("-p", "--public", is_flag=True, help="Make the Gist public.")
-def create_gist(path: str, description: str | None, web: bool, public: bool):
+@click.option("-q", "--qr", is_flag=True, help="Generate QRCode to gist.")
+def create_gist(
+    path: str, description: str | None, web: bool, public: bool, qr: bool
+):
     """Create a new Gist from a file or all files in a directory."""
     try:
         token = get_token()
@@ -93,6 +97,8 @@ def create_gist(path: str, description: str | None, web: bool, public: bool):
         response.raise_for_status()
         gist_id = response.json().get("id")
         gist_url = f"https://gist.github.com/{gist_id}"
+        if qr:
+            gen_qr_code(gist_url)
         click.echo("Gist created successfully!")
         click.echo(f"ID: {gist_id}")
         click.echo(f"URL: {gist_url}")
