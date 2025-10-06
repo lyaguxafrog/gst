@@ -1,6 +1,6 @@
 [project]
 name = "gist-cli"
-version = "0.1.2"
+version = "0.1.3"
 description = "GitHub Gist cli without github, only gist."
 readme = "README.md"
 license = {text = "Apache-2.0 license"}
@@ -18,7 +18,6 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://gst.makridenko.ru"
 Repository = "https://github.com/lyaguxafrog/gst"
 Issues = "https://github.com/lyaguxafrog/gst/issues"
 
