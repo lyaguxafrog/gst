@@ -17,5 +17,5 @@ pip install gist-cli
 
 ## Example:
 ```bash
-gst create -d "My new gist" -f example.p
+gst create example.py
 ```

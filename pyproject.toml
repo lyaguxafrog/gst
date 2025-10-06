@@ -13,6 +13,8 @@ dependencies = [
     "click>=8.3.0",
     "httpx>=0.28.1",
     "keyring>=25.6.0",
+    "qrcode>=8.2",
+    "segno>=1.6.6",
 ]
 
 [project.urls]
@@ -37,8 +39,6 @@ dev = [
     "icecream>=2.1.8",
     "isort>=6.0.1",
     "ruff>=0.13.2",
-    "sphinx>=8.2.3",
-    "sphinx-click>=6.1.0",
 ]
 
 [tool.ruff]
